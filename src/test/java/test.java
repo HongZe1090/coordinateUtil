@@ -1,6 +1,5 @@
 import com.coordinate.Util.coordtrans;
 import org.junit.Test;
-import org.osgeo.proj4j.CoordinateTransform;
 import org.osgeo.proj4j.ProjCoordinate;
 
 public class test {
