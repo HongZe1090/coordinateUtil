@@ -20,6 +20,7 @@ public class test {
 
         ExcelOperate excel = new ExcelOperate();
         excel.Load("RizhaoToKuiShan.xlsx");
-        excel.Read();
+//        excel.Read();
+        excel.Write();
     }
 }
