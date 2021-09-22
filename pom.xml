@@ -20,11 +20,29 @@
             <version>0.1.1</version>
         </dependency>
         <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>easyexcel</artifactId>
+            <version>2.2.4</version>
+        </dependency>
+        <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
             <version>4.13</version>
             <scope>test</scope>
         </dependency>
     </dependencies>
+
+<!--    java maven项目testng执行时使用的是test-classes下的文件，共享main下方resource的配置-->
+
+    <build>
+        <testResources>
+            <testResource>
+                <directory>${project.basedir}/src/test/resources</directory>
+            </testResource>
+            <testResource>
+                <directory>${project.basedir}/src/main/resources</directory>
+            </testResource>
+        </testResources>
+    </build>
 
 </project>
