@@ -5,58 +5,69 @@ import com.alibaba.excel.metadata.BaseRowModel;
 
 import java.io.Serializable;
 
-public class ExcelPrama {
-    public class UserExcelModel  extends BaseRowModel implements Serializable {
-        public UserExcelModel(double x, double y, double longitude, double latitude) {
-            X = x;
-            Y = y;
+public class ExcelPrama extends BaseRowModel implements Serializable{
+        @ExcelProperty(index = 0)
+        private Double x;
+
+        @ExcelProperty(index = 1)
+        private Double y;
+
+        @ExcelProperty(index = 2)
+        private String longitude;
+        ;
+
+        @ExcelProperty(index = 3)
+        private String latitude;;
+
+        @Override
+        public String toString() {
+            return "ExcelPrama{" +
+                    "X=" + this.x +
+                    ", Y=" + this.y +
+                    ", longitude=" + longitude +
+                    ", latitude=" + latitude +
+                    '}';
+        }
+
+        public ExcelPrama(Double x, Double y, String longitude, String latitude) {
+            this.x = x;
+            this.y = y;
             this.longitude = longitude;
             this.latitude = latitude;
         }
 
-        public double getX() {
-            return X;
+        public Double getX() {
+            return x;
         }
 
-        public void setX(double x) {
-            X = x;
+        public void setX(Double x) {
+            this.x = x;
         }
 
-        public double getY() {
-            return Y;
+        public Double getY() {
+            return y;
         }
 
-        public void setY(double y) {
-            Y = y;
+        public void setY(Double y) {
+            this.y = y;
         }
 
-        public double getLongitude() {
+        public String getLongitude() {
             return longitude;
         }
 
-        public void setLongitude(double longitude) {
+        public void setLongitude(String longitude) {
             this.longitude = longitude;
         }
 
-        public double getLatitude() {
+        public String getLatitude() {
             return latitude;
         }
 
-        public void setLatitude(double latitude) {
+    public ExcelPrama() {
+    }
+
+    public void setLatitude(String latitude) {
             this.latitude = latitude;
         }
-
-        @ExcelProperty(value = "X", index = 0)
-        private double X;
-
-        @ExcelProperty(value = "Y", index = 1)
-        private double Y;
-
-        @ExcelProperty(value = "经度", index = 2)
-        private double longitude;
-        ;
-
-        @ExcelProperty(value = "纬度", index = 3)
-        private double latitude;;
-    }
 }
