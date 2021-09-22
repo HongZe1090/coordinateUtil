@@ -13,7 +13,7 @@ public class coordtrans {
         String target_param =  "+proj=longlat +datum=WGS84 +no_defs ";
         CoordinateReferenceSystem target = targetFactory.createFromParameters("wgs84", target_param);
         //源坐标系统
-        String xian80_param = "+proj=longlat +a=6378140 +b=6356755.288157528 +towgs84=115.8,-154.4,-82.3,0,0,0,8 +no_defs ";
+        String xian80_param = "+proj=longlat +a=6378140 +b=6356755.288157528 +towgs84=94.462,70.149,-1.511,-0.423814,-0.091708,0.133866,-1.732 +no_defs ";
         CoordinateReferenceSystem xian80 = crsFactory.createFromParameters("xian80", xian80_param);
 
         CoordinateTransformFactory ctf = new CoordinateTransformFactory();
