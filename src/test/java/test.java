@@ -19,6 +19,6 @@ public class test {
         System.out.print(dEast);
 
         ExcelOperate excel = new ExcelOperate();
-excel.Load("1.txt");
+excel.Load("RizhaoToKuiShan.xlsx");
     }
 }
