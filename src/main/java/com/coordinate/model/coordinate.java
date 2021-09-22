@@ -1,30 +1,30 @@
 package com.coordinate.model;
 
 public class coordinate {
-    private String argX;
-    private String argY;
+    private Double argX;
+    private Double argY;
 
     public coordinate() {
     }
 
-    public coordinate(String argX, String argY) {
+    public coordinate(Double argX, Double argY) {
         this.argX = argX;
         this.argY = argY;
     }
 
-    public String getArgX() {
+    public Double getArgX() {
         return argX;
     }
 
-    public void setArgX(String argX) {
+    public void setArgX(Double argX) {
         this.argX = argX;
     }
 
-    public String getArgY() {
+    public Double getArgY() {
         return argY;
     }
 
-    public void setArgY(String argY) {
+    public void setArgY(Double argY) {
         this.argY = argY;
     }
 }

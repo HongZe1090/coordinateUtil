@@ -14,6 +14,7 @@ public class ExcelOperate {
 
     private static String Prama = "excelTemplete";
     private String excelPath;
+    private String outPath;
     private List<writeExcelPrama> writeData= new ArrayList<>();
 
     public void Load(String fileName) throws IOException {
