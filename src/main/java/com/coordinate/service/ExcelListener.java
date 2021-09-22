@@ -3,17 +3,16 @@ package com.coordinate.service;
 import com.alibaba.excel.context.AnalysisContext;
 import com.alibaba.excel.event.AnalysisEventListener;
 import com.alibaba.excel.metadata.CellData;
-import com.coordinate.model.ExcelPrama;
+import com.coordinate.model.readExcelPrama;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
-public class ExcelListener extends AnalysisEventListener<ExcelPrama> {
-    private List<ExcelPrama> datas = new ArrayList<>();
+public class ExcelListener extends AnalysisEventListener<readExcelPrama> {
+    private List<readExcelPrama> datas = new ArrayList<>();
     @Override
-    public void invoke(ExcelPrama data, AnalysisContext analysisContext) {
-        System.out.println(analysisContext.getCurrentRowNum());
+    public void invoke(readExcelPrama data, AnalysisContext analysisContext) {
         datas.add(data);
         System.out.println(data.toString());
     }
