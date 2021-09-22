@@ -31,11 +31,13 @@ public class ExcelOperate {
     public void Read(){
         List<readExcelPrama> list = new ArrayList<>();
         list = EasyExcel.read(excelPath , readExcelPrama.class,new ExcelListener()).sheet("Sheet1").doReadSync();
+        System.out.println(list);
     }
 
     public void Write(){
 //        EasyExcel.write(excelPath , writeExcelPrama.class).sheet("Sheet1").doWrite(writeData);
         System.out.println("success");
+
 
         ExcelWriter excelWriter = EasyExcel.write(excelPath, writeExcelPrama.class).build();
         WriteSheet writeSheet = EasyExcel.writerSheet("Sheet1").build();

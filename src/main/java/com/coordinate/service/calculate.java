@@ -20,5 +20,4 @@ public class calculate {
         coordinate coord = new coordinate(projCoordinate.x,projCoordinate.y);
         return coord;
     }
-
 }

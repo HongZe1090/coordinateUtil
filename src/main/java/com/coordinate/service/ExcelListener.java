@@ -14,7 +14,6 @@ public class ExcelListener extends AnalysisEventListener<readExcelPrama> {
     @Override
     public void invoke(readExcelPrama data, AnalysisContext analysisContext) {
         datas.add(data);
-        System.out.println(data.toString());
     }
 
     @Override
