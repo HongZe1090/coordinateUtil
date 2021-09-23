@@ -6,10 +6,10 @@ import com.alibaba.excel.metadata.BaseRowModel;
 import java.io.Serializable;
 
 public class writeExcelPrama extends BaseRowModel implements Serializable {
-    @ExcelProperty(index = 0)
+    @ExcelProperty(value = "X" , index = 0)
     private Double x;
 
-    @ExcelProperty(index = 1)
+    @ExcelProperty(value = "Y",index = 1)
     private Double y;
 
     @ExcelProperty(value = "经度" ,index = 2)
