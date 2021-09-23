@@ -8,7 +8,8 @@ public class calculate {
 
     public static coordinate compute(Double x, Double y) {
         coordtrans test = new coordtrans();
-        ProjCoordinate projCoordinate = new ProjCoordinate(x, y);
+//        一般情况下y在前，x在后
+        ProjCoordinate projCoordinate = new ProjCoordinate(y, x);
         test.coordtrans().transform(projCoordinate, projCoordinate);
 
         Double dNorth = projCoordinate.y;

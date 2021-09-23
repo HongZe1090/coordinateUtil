@@ -50,9 +50,7 @@ public class ExcelOperate {
     public void handler() {
         for(readExcelPrama value:list){
             coordinate coor = new calculate().compute(value.getX(),value.getY());
-            writeExcelPrama write = new writeExcelPrama();
-            write.setLongitude(coor.getArgX());
-            write.setLatitude(coor.getArgY());
+            writeExcelPrama write = new writeExcelPrama(value.getX(),value.getY(),coor.getArgX(),coor.getArgY());
             writeData.add(write);
         }
     }
